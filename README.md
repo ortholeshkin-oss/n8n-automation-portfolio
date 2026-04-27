@@ -8,7 +8,27 @@ All workflows use **DeepSeek** as the LLM (35× cheaper than GPT-4 for the same 
 
 ---
 
-## The 10 workflows
+## ⭐ Flagship: AI Acquisition Engine
+
+> **An 8-workflow sales automation system that replaces a $500-1,500/month SaaS stack (Apollo + Lemlist + Calendly + HubSpot) and the work of one SDR.**
+
+#### [n8n-acquisition-engine](https://github.com/ortholeshkin-oss/n8n-acquisition-engine)
+
+Drop a list of company URLs in. Get back enriched leads, personalized outreach drafts in your Gmail, classified replies in Slack, calendar invites for the prospects who say yes, and a weekly executive report on what worked. All for $5-15/month in API costs. Run it from your phone via a Telegram bot.
+
+The 10 workflows below are **smaller pieces of the same playbook**. Acquisition Engine connects them into one orchestrated system with shared Postgres state, a Telegram control panel, and an analytics layer. Read [`ARCHITECTURE.md`](https://github.com/ortholeshkin-oss/n8n-acquisition-engine/blob/main/ARCHITECTURE.md) to see how it's wired.
+
+- **Tech:** 8 workflows · 6-table Postgres schema · Telegram bot · DeepSeek throughout
+- **Replaces:** Apollo $99/mo + Lemlist $59/mo + Calendly $20/mo + HubSpot $50/mo + 1 SDR ($60-80k/yr)
+- **License:** PolyForm Noncommercial 1.0.0 — free for personal, education, research, noncommercial. Commercial use requires a paid license ([DM me on Fiverr](https://fiverr.com/alexkinis)).
+
+For a custom build adapted to your CRM and outbound process: $1,500-3,000, 7-14 day turnaround.
+
+---
+
+## The 10 building-block workflows
+
+These are smaller, single-purpose workflows. Each one is MIT-licensed and works on its own. They're also the components that ship inside the Acquisition Engine flagship above.
 
 ### 🎯 Sales / Lead generation
 
@@ -87,7 +107,7 @@ The math behind it is simple:
 1. **n8n + DeepSeek does the actual work.** SaaS tools wrap the same functionality with marketing, sales, and 80%+ gross margins.
 2. **DeepSeek is 35× cheaper than GPT-4** for structured-JSON tasks like extraction and classification, with comparable accuracy.
 3. **You pay once for the build, run forever at marginal cost.** No per-seat fees, no per-message charges, no contracts.
-4. **The workflows are yours.** Modify, fork, sell, white-label — all under MIT license.
+4. **The 10 component workflows are yours under MIT.** Modify, fork, sell, white-label — all permitted. (The Acquisition Engine flagship uses a different license — see its README.)
 
 A typical SaaS company charging $99/month for one of these features has a cost-of-goods of <$2/month per user. The other $97 is sales, marketing, support, and profit margin.
 
@@ -95,7 +115,7 @@ This portfolio shows what those products *actually* do under the hood — and ho
 
 ---
 
-## Common shape across all 10 workflows
+## Common shape across all 10 building-block workflows
 
 Each repo has the same structure for easy onboarding:
 
@@ -126,10 +146,12 @@ Total setup time: 5–10 minutes per workflow.
 
 Each workflow ships as a generic foundation. For your specific use case — your CRM, your accounting database, your supplier portal, your domain knowledge — I do custom adaptations on Fiverr.
 
-**Typical custom builds:**
-- $30–250 for adaptation + integration with your tools
-- 3–7 day turnaround
-- 30 days of post-delivery support
+| Tier | Scope | Price | Turnaround |
+|---|---|---|---|
+| Single workflow adaptation | One of the 10 building blocks adapted to your stack | $90-450 | 3-7 days |
+| Multi-workflow integration | 3-4 workflows wired together | $600-1,200 | 5-7 days |
+| **Full Acquisition Engine** | All 8 workflows custom-built for your CRM and outbound process | **$1,500-3,000** | **7-14 days** |
+| Hosted-on-our-VPS | Managed hosting + monitoring | $200-300/mo | recurring |
 
 Find me on [Fiverr](https://fiverr.com/alexkinis) — search for "n8n automation" or DM me directly with your use case for a no-cost feasibility check before you order.
 
@@ -146,7 +168,8 @@ Find me on [Fiverr](https://fiverr.com/alexkinis) — search for "n8n automation
 
 ## License
 
-All 10 workflows are MIT-licensed. Use them freely in personal and commercial projects, fork them, sell them — just don't claim you wrote them.
+- **The 10 building-block workflows:** MIT — use freely in personal and commercial projects, fork them, sell them — just don't claim you wrote them.
+- **AI Acquisition Engine flagship:** PolyForm Noncommercial 1.0.0 — free for personal, education, research, noncommercial. Commercial use requires a paid license ([contact via Fiverr](https://fiverr.com/alexkinis)).
 
 ---
 
